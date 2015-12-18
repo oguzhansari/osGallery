@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>oSgallery by oguzhansari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">oSgallery</h1>
+      <h2 class="project-tagline">osGaller: jQuery ile gelişitirilmiş CSS3 ile güçlendirilmiş galeri uygulaması.</h2>
+      <a href="https://github.com/oguzhansari/osGallery" class="btn">View on GitHub</a>
+      <a href="https://github.com/oguzhansari/osGallery/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/oguzhansari/osGallery/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="osgallery" class="anchor" href="#osgallery" aria-hidden="true"><span class="octicon octicon-link"></span></a>osGallery</h1>
+
+<p>jQuery ile gelişitirilmiş CSS3 ile güçlendirilmiş galeri uygulaması.</p>
+
+<h3>
+<a id="Özellikleri" class="anchor" href="#%C3%96zellikleri" aria-hidden="true"><span class="octicon octicon-link"></span></a>Özellikleri</h3>
+
+<ul>
+<li>Açılır pencere galeri</li>
+<li>Direk olarak canlı izleme alanı ve açılır pencere galeri</li>
+<li>İlişkilendirmeli gösterim</li>
+<li>Destroy (sıfırlama)</li>
+<li>rebuild (yeniden oluşturma)</li>
+<li>arrayrebuild (iliklişi yeniden oluşturma)</li>
+<li>animate.css ile geçiş efektleri</li>
+</ul>
+
+<h3>
+<a id="kullanımı" class="anchor" href="#kullan%C4%B1m%C4%B1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kullanımı</h3>
+
+<p>Görüntülenmesini istediğin nesnenin ' data-view="true" ' tagına sahip olması gerekmektedir.</p>
+
+<h4>
+<a id="1-include-canlı-izleme-özelliğinde-galeri-oluşturmak-için" class="anchor" href="#1-include-canl%C4%B1-izleme-%C3%B6zelli%C4%9Finde-galeri-olu%C5%9Fturmak-i%C3%A7in" aria-hidden="true"><span class="octicon octicon-link"></span></a>1) Include (Canlı izleme) özelliğinde galeri oluşturmak için</h4>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">&lt;</span>div class=<span class="pl-s"><span class="pl-pds">"</span>gallerystyle1<span class="pl-pds">"</span></span> id=<span class="pl-s"><span class="pl-pds">"</span>gallery1<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>div class=<span class="pl-s"><span class="pl-pds">"</span>viewerBox<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>div class=<span class="pl-s"><span class="pl-pds">"</span>viewer<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>img src=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_1.jpg<span class="pl-pds">"</span></span> data-big-img=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_1.jpg<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>/div<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>/div<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>ul class=<span class="pl-s"><span class="pl-pds">"</span>thumbnails<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>li data-view=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>figure<span class="pl-k">&gt;&lt;</span>img src=<span class="pl-s"><span class="pl-pds">"</span>resim/kucuk_4.jpg<span class="pl-pds">"</span></span> data-big-img=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_4.jpg<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;&lt;</span>/figure<span class="pl-k">&gt;&lt;</span>/li<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>li data-view=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>figure<span class="pl-k">&gt;&lt;</span>img src=<span class="pl-s"><span class="pl-pds">"</span>resim/kucuk_5.jpg<span class="pl-pds">"</span></span> data-big-img=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_5.jpg<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;&lt;</span>/figure<span class="pl-k">&gt;&lt;</span>/li<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>li data-view=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>figure<span class="pl-k">&gt;&lt;</span>img src=<span class="pl-s"><span class="pl-pds">"</span>resim/kucuk_8.jpg<span class="pl-pds">"</span></span> data-big-img=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_8.jpg<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;&lt;</span>/figure<span class="pl-k">&gt;&lt;</span>/li<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>li data-view=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>figure<span class="pl-k">&gt;&lt;</span>img src=<span class="pl-s"><span class="pl-pds">"</span>resim/kucuk_9.jpg<span class="pl-pds">"</span></span> data-big-img=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_9.jpg<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;&lt;</span>/figure<span class="pl-k">&gt;&lt;</span>/li<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>/ul<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>/div<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>script<span class="pl-k">&gt;</span>
+    <span class="pl-s"><span class="pl-pds">$(</span><span class="pl-en">document).ready(function</span> () {</span>
+<span class="pl-s">        <span class="pl-s"><span class="pl-pds">$(</span><span class="pl-s"><span class="pl-pds">'</span>#gallery1<span class="pl-pds">'</span></span><span class="pl-pds">)</span></span>.osGallery({ imgElement: <span class="pl-s"><span class="pl-pds">'</span>li<span class="pl-pds">'</span></span>, galleryType: <span class="pl-s"><span class="pl-pds">"</span>include<span class="pl-pds">"</span></span> })<span class="pl-k">;</span></span>
+<span class="pl-s">    });</span>
+<span class="pl-s"><span class="pl-k">&lt;</span>/script<span class="pl-k">&gt;</span></span>
+<span class="pl-s"><span class="pl-k">&lt;</span>style<span class="pl-k">&gt;</span></span>
+<span class="pl-s">.gallerystyle1 { border: 2px solid <span class="pl-c">#808080; width: 600px; margin: 0 auto; margin-top: 20px; }</span></span>
+<span class="pl-s">.gallerystyle1 <span class="pl-k">*</span> { list-style: none<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle1 img { max-width: 100%<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle1 .viewerBox { width: 100%<span class="pl-k">;</span> height: 380px<span class="pl-k">;</span> display: table<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle1 .viewerBox .viewer { cursor: pointer<span class="pl-k">;</span> display: table-cell<span class="pl-k">;</span> vertical-align: middle<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle1 .viewerBox .viewer img { display: block<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle1 .thumbnails { border-top: 1px solid <span class="pl-c">#808080; }</span></span>
+<span class="pl-s">.gallerystyle1 .thumbnails:after { display: block<span class="pl-k">;</span> content: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span><span class="pl-k">;</span> clear: both<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle1 .thumbnails li { float: left<span class="pl-k">;</span> height: 80px<span class="pl-k">;</span> width: 20%<span class="pl-k">;</span> box-sizing: border-box<span class="pl-k">;</span> display: table<span class="pl-k">;</span> border-right: 1px solid <span class="pl-c">#808080; border-bottom: 1px solid #808080; }</span></span>
+<span class="pl-s">.gallerystyle1 .thumbnails li figure { display: table-cell<span class="pl-k">;</span> vertical-align: middle<span class="pl-k">;</span> text-align: center<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle1 .thumbnails li figure img { max-height: 80%<span class="pl-k">;</span> max-width: 80%<span class="pl-k">;</span> margin: 0 auto<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle1 .thumbnails li:nth-of-type(5n+0) { border-right: 0<span class="pl-k">;</span> }</span>
+<span class="pl-s"><span class="pl-k">&lt;</span>/style<span class="pl-k">&gt;</span></span></pre></div>
+
+<h4>
+<a id="2-açılır-galeri-özelliğinde-oluşturmak-için" class="anchor" href="#2-a%C3%A7%C4%B1l%C4%B1r-galeri-%C3%B6zelli%C4%9Finde-olu%C5%9Fturmak-i%C3%A7in" aria-hidden="true"><span class="octicon octicon-link"></span></a>2) Açılır galeri özelliğinde oluşturmak için</h4>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">&lt;</span>section class=<span class="pl-s"><span class="pl-pds">"</span>gallerystyle2<span class="pl-pds">"</span></span> id=<span class="pl-s"><span class="pl-pds">"</span>gallery2<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>div class=<span class="pl-s"><span class="pl-pds">"</span>item<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>figure data-view=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>span<span class="pl-k">&gt;</span>
+                <span class="pl-k">&lt;</span>img data-title=<span class="pl-s"><span class="pl-pds">"</span>Resim Açıklama 1<span class="pl-pds">"</span></span> src=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_1.jpg<span class="pl-pds">"</span></span> data-big-img=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_1.jpg<span class="pl-pds">"</span></span> class=<span class="pl-s"><span class="pl-pds">"</span>grayscale grayscale-fade<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>/span<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>/figure<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>figure data-view=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>span<span class="pl-k">&gt;</span>
+                <span class="pl-k">&lt;</span>img data-title=<span class="pl-s"><span class="pl-pds">"</span>Resim Açıklama 1<span class="pl-pds">"</span></span> src=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_2.jpg<span class="pl-pds">"</span></span> data-big-img=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_2.jpg<span class="pl-pds">"</span></span> class=<span class="pl-s"><span class="pl-pds">"</span>grayscale grayscale-fade<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>/span<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>/figure<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>figure data-view=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>span<span class="pl-k">&gt;</span>
+                <span class="pl-k">&lt;</span>img data-title=<span class="pl-s"><span class="pl-pds">"</span>Resim Açıklama 1<span class="pl-pds">"</span></span> src=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_3.jpg<span class="pl-pds">"</span></span> data-big-img=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_3.jpg<span class="pl-pds">"</span></span> class=<span class="pl-s"><span class="pl-pds">"</span>grayscale grayscale-fade<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>/span<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>/figure<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>figure data-view=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>span<span class="pl-k">&gt;</span>
+                <span class="pl-k">&lt;</span>img data-title=<span class="pl-s"><span class="pl-pds">"</span>Resim Açıklama 1<span class="pl-pds">"</span></span> src=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_6.jpg<span class="pl-pds">"</span></span> data-big-img=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_6.jpg<span class="pl-pds">"</span></span> class=<span class="pl-s"><span class="pl-pds">"</span>grayscale grayscale-fade<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>/span<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>/figure<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>figure data-view=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>span<span class="pl-k">&gt;</span>
+                <span class="pl-k">&lt;</span>img data-title=<span class="pl-s"><span class="pl-pds">"</span>Resim Açıklama 1<span class="pl-pds">"</span></span> src=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_7.jpg<span class="pl-pds">"</span></span> data-big-img=<span class="pl-s"><span class="pl-pds">"</span>resim/buyuk_7.jpg<span class="pl-pds">"</span></span> class=<span class="pl-s"><span class="pl-pds">"</span>grayscale grayscale-fade<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>/span<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>/figure<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>/div<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>/section<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>script<span class="pl-k">&gt;</span>
+    <span class="pl-s"><span class="pl-pds">$(</span><span class="pl-en">document).ready(function</span> () {</span>
+<span class="pl-s">        <span class="pl-s"><span class="pl-pds">$(</span><span class="pl-s"><span class="pl-pds">'</span>#gallery2<span class="pl-pds">'</span></span><span class="pl-pds">)</span></span>.<span class="pl-en">osGallery</span>();</span>
+<span class="pl-s">    });</span>
+<span class="pl-s"><span class="pl-k">&lt;</span>/script<span class="pl-k">&gt;</span></span>
+<span class="pl-s"><span class="pl-k">&lt;</span>style<span class="pl-k">&gt;</span></span>
+<span class="pl-s">.gallerystyle2 { display: table<span class="pl-k">;</span> margin: 0 auto<span class="pl-k">;</span> max-width: 800px<span class="pl-k">;</span> padding-top: 20px<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle2 h3 { display: inline-block<span class="pl-k">;</span> font-size: 22px<span class="pl-k">;</span> color: <span class="pl-c">#222222; text-shadow: 1px 1px #fff; padding: 10px; padding-left: 0; padding-bottom: 20px; position: relative; }</span></span>
+<span class="pl-s">.gallerystyle2 h3:after { content: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span><span class="pl-k">;</span> position: absolute<span class="pl-k">;</span> width: 40%<span class="pl-k">;</span> bottom: 14px<span class="pl-k">;</span> left: 0<span class="pl-k">;</span> background-color: <span class="pl-c">#222222; height: 2px; }</span></span>
+<span class="pl-s">.gallerystyle2:after { content: <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span><span class="pl-k">;</span> display: block<span class="pl-k">;</span> clear: both<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle2 div.item { display: table<span class="pl-k">;</span> border: 1px solid <span class="pl-c">#808080; }</span></span>
+<span class="pl-s">.gallerystyle2 div.item figure { float: left<span class="pl-k">;</span> height: 80px<span class="pl-k">;</span> width: 20%<span class="pl-k">;</span> box-sizing: border-box<span class="pl-k">;</span> display: table<span class="pl-k">;</span> border-right: 1px solid <span class="pl-c">#808080; border-bottom: 1px solid #808080; }</span></span>
+<span class="pl-s">.gallerystyle2 div.item figure span { display: table-cell<span class="pl-k">;</span> vertical-align: middle<span class="pl-k">;</span> text-align: center<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle2 div.item figure span img { max-height: 79px<span class="pl-k">;</span> max-width: 100%<span class="pl-k">;</span> margin: 0 auto<span class="pl-k">;</span> }</span>
+<span class="pl-s">.gallerystyle2 div.item figure:nth-of-type(5n+0) { border-right: 0<span class="pl-k">;</span> }</span>
+<span class="pl-s"><span class="pl-k">&lt;</span>/style<span class="pl-k">&gt;</span></span></pre></div>
+
+<h4>
+<a id="3-İlişkilendirmeli-galeri" class="anchor" href="#3-%C4%B0li%C5%9Fkilendirmeli-galeri" aria-hidden="true"><span class="octicon octicon-link"></span></a>3) İlişkilendirmeli galeri</h4>
+
+<p>İlişkilendirmeli galeri bir amaca yönelik oluşturuldu.
+Şu şekilde;</p>
+
+<pre><code>Bir e-ticaret siteniz,
+Bir ürün eklediniz ve ürününüze 10 tane resim girdiniz.
+Ve ürünüze ait varyantlar mevcut.
+Varyant girip eklediğiniz resimlerden varyanta ait olanları seçiyorsunuz.
+Kullanıcı tarafında varyant seçimi yapan bir kullanıcıya galeride sadece o varyanta özel resimler gösteriliyor.
+(Hiç bir varyanta eklenmeyecen resimlerde ortak resim olarak kabul edilir ve gösterilir.)
+</code></pre>
+
+<h3>
+<a id="versiyon" class="anchor" href="#versiyon" aria-hidden="true"><span class="octicon octicon-link"></span></a>Versiyon</h3>
+
+<p>2.0</p>
+
+<h3>
+<a id="teknik" class="anchor" href="#teknik" aria-hidden="true"><span class="octicon octicon-link"></span></a>Teknik</h3>
+
+<p>jQuery 2.1.4 ( <a href="http://www.jquery.com">http://www.jquery.com</a> )
+Animate.css ( <a href="https://daneden.github.io/animate.css">https://daneden.github.io/animate.css</a> )
+Gray 1.4.5 ( <a href="https://github.com/karlhorky/gray">https://github.com/karlhorky/gray</a> )</p>
+
+<h3>
+<a id="kurulum" class="anchor" href="#kurulum" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kurulum</h3>
+
+<p>Aşağıdaki kodları </p> tagı içerisine yerleştirin.
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">&lt;</span>link href=<span class="pl-s"><span class="pl-pds">"</span>animate.css<span class="pl-pds">"</span></span> rel=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>link href=<span class="pl-s"><span class="pl-pds">"</span>gray.min.css<span class="pl-pds">"</span></span> rel=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>link href=<span class="pl-s"><span class="pl-pds">"</span>osGallery.css<span class="pl-pds">"</span></span> rel=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>script <span class="pl-c1">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> src=<span class="pl-s"><span class="pl-pds">"</span>http://code.jquery.com/jquery-2.1.4.min.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>script <span class="pl-c1">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> src=<span class="pl-s"><span class="pl-pds">"</span>osGallery.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span></pre></div>
+
+<p>Yukarıdaki örnek kodları sitenize entegre edin ve kullanmaya başlayın.</p>
+
+<blockquote>
+<p>Teşekkürler. :)</p>
+
+<p>Oğuzhan SARI</p>
+
+<p><a href="mailto:os@oguzhansari.com">os@oguzhansari.com</a></p>
+
+<p><a href="http://www.oguzhansari.com">www.oguzhansari.com</a></p>
+</blockquote>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/oguzhansari/osGallery">oSgallery</a> is maintained by <a href="https://github.com/oguzhansari">oguzhansari</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-71553432-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
