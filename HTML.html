@@ -1,0 +1,61 @@
+<link href="animate.css" rel="stylesheet" />
+<link href="gray.min.css" rel="stylesheet" />
+<link href="osGallery.css" rel="stylesheet" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="osGallery.js"></script>
+
+<div class="gallerystyle1" id="gallery1">
+    <div class="viewerBox">
+        <div class="viewer">
+            <img src="resim/buyuk_1.jpg" data-big-img="resim/buyuk_1.jpg" />
+        </div>
+    </div>
+    <ul class="thumbnails">
+        <li data-view="true"><figure><img src="resim/kucuk_4.jpg" data-big-img="resim/buyuk_4.jpg" /></figure></li>
+        <li data-view="true"><figure><img src="resim/kucuk_5.jpg" data-big-img="resim/buyuk_5.jpg" /></figure></li>
+        <li data-view="true"><figure><img src="resim/kucuk_8.jpg" data-big-img="resim/buyuk_8.jpg" /></figure></li>
+        <li data-view="true"><figure><img src="resim/kucuk_9.jpg" data-big-img="resim/buyuk_9.jpg" /></figure></li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#gallery1').osGallery({ imgElement: 'li', galleryType: "include" });
+    });
+</script>
+
+<br><br><br>
+
+<section class="gallerystyle2" id="gallery2">
+    <div class="item">
+        <figure data-view="true">
+            <span>
+                <img data-title="Resim Açýklama 1" src="resim/buyuk_1.jpg" data-big-img="resim/buyuk_1.jpg" class="grayscale grayscale-fade" />
+            </span>
+        </figure>
+        <figure data-view="true">
+            <span>
+                <img data-title="Resim Açýklama 1" src="resim/buyuk_2.jpg" data-big-img="resim/buyuk_2.jpg" class="grayscale grayscale-fade" />
+            </span>
+        </figure>
+        <figure data-view="true">
+            <span>
+                <img data-title="Resim Açýklama 1" src="resim/buyuk_3.jpg" data-big-img="resim/buyuk_3.jpg" class="grayscale grayscale-fade" />
+            </span>
+        </figure>
+        <figure data-view="true">
+            <span>
+                <img data-title="Resim Açýklama 1" src="resim/buyuk_6.jpg" data-big-img="resim/buyuk_6.jpg" class="grayscale grayscale-fade" />
+            </span>
+        </figure>
+        <figure data-view="true">
+            <span>
+                <img data-title="Resim Açýklama 1" src="resim/buyuk_7.jpg" data-big-img="resim/buyuk_7.jpg" class="grayscale grayscale-fade" />
+            </span>
+        </figure>
+	</div>
+</section>
+<script>
+    $(document).ready(function () {
+        $('#gallery2').osGallery();
+    });
+</script>			   
