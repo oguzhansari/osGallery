@@ -8,7 +8,7 @@ jQuery ile gelişitirilmiş CSS3 ile güçlendirilmiş galeri uygulaması.
   - İlişkilendirmeli gösterim
   - Destroy (sıfırlama)
   - rebuild (yeniden oluşturma)
-  - arrayrebuild (iliklişi yeniden oluşturma)
+  - arrayrebuild (ilişkili galeri yeniden oluşturma)
   - animate.css ile geçiş efektleri
 
 ### Kullanımı
@@ -103,12 +103,12 @@ Görüntülenmesini istediğin nesnenin ' data-view="true" ' tagına sahip olmas
 İlişkilendirmeli galeri bir amaca yönelik oluşturuldu.
 Şu şekilde;
     
-    Bir e-ticaret siteniz,
+    Bir e-ticaret siteniz var.
     Bir ürün eklediniz ve ürününüze 10 tane resim girdiniz.
-    Ve ürünüze ait varyantlar mevcut.
+    Ve ürününüze ait varyantlar mevcut.
     Varyant girip eklediğiniz resimlerden varyanta ait olanları seçiyorsunuz.
     Kullanıcı tarafında varyant seçimi yapan bir kullanıcıya galeride sadece o varyanta özel resimler gösteriliyor.
-    (Hiç bir varyanta eklenmeyecen resimlerde ortak resim olarak kabul edilir ve gösterilir.)
+    (Hiç bir varyanta eklenmeyen resimlerde ortak resim olarak kabul edilir ve gösterilir.)
     
 ### Versiyon
 2.0
@@ -116,7 +116,9 @@ Görüntülenmesini istediğin nesnenin ' data-view="true" ' tagına sahip olmas
 ### Teknik
 
 jQuery 2.1.4 ( http://www.jquery.com )
+
 Animate.css ( https://daneden.github.io/animate.css )
+
 Gray 1.4.5 ( https://github.com/karlhorky/gray )
 
 ### Kurulum
