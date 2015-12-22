@@ -123,7 +123,7 @@ Gray 1.4.5 ( https://github.com/karlhorky/gray )
 
 ### Kurulum
 
-Aşağıdaki kodları <head> tagı içerisine yerleştirin.
+Aşağıdaki kodları < head > tagı içerisine yerleştirin.
 
 ```sh
 <link href="animate.css" rel="stylesheet" />
